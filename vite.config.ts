@@ -8,7 +8,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/*.png'],
       manifest: {
-        id: './',
+        id: '/count-ippatsu/',
         name: 'カウント一発',
         short_name: 'カウント',
         description:
