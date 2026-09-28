@@ -1,0 +1,36 @@
+import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
+
+export default defineConfig({
+  base: './',
+  plugins: [
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['icons/*.png'],
+      manifest: {
+        id: './',
+        name: 'カウント一発',
+        short_name: 'カウント',
+        description:
+          '大きなボタンで数えるカウンター。無料・広告なし・ログイン不要・オフライン対応。Tally counters with big buttons — free, no ads, no login, offline.',
+        lang: 'ja',
+        theme_color: '#7C3AED',
+        background_color: '#F7F4FE',
+        display: 'standalone',
+        orientation: 'portrait',
+        start_url: './',
+        scope: './',
+        icons: [
+          { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+          { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+          { src: 'icons/icon-maskable-192.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
+          { src: 'icons/icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+        ],
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
+        navigateFallback: 'index.html',
+      },
+    }),
+  ],
+});
