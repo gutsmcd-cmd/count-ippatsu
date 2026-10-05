@@ -25,7 +25,7 @@ const ja = {
 };
 export type Dict = typeof ja;
 const en: Dict = {
-  app: 'Count Ippatsu',
+  app: 'Count Once',
   tapHint: 'Tap for +1',
   add: 'Add counter',
   newName: (n: number) => `Counter ${n}`,
