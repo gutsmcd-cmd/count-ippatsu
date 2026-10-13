@@ -1,6 +1,6 @@
 export type Lang = 'ja' | 'en';
 const ja = {
-  app: 'カウント一発',
+  app: 'カウンター',
   tapHint: 'タップで +1',
   add: 'カウンターを追加',
   newName: (n: number) => `カウンター${n}`,

@@ -9,7 +9,7 @@ export default defineConfig({
       includeAssets: ['icons/*.png'],
       manifest: {
         id: '/count-ippatsu/',
-        name: 'カウント一発',
+        name: 'カウンター',
         short_name: 'カウント',
         description:
           '大きなボタンで数えるカウンター。無料・広告なし・ログイン不要・オフライン対応。Tally counters with big buttons — free, no ads, no login, offline.',
